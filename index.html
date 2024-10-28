@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encryption Chat Bot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>🔐 Encryption Chat Bot</h1>
+        </div>
+        <div id="chat-box" class="chat-box">
+            <!-- Chat messages will appear here -->
+        </div>
+        <div class="chat-input">
+            <select id="encryption-method">
+                <option value="mirror">Mirror Encryption</option>
+                <option value="affine">Affine Cipher</option>
+                <option value="shift">Shift Cipher</option>
+                <option value="caesar">Caesar Cipher</option>
+            </select>
+            <input type="text" id="user-input" placeholder="Type your message here..." onkeydown="if(event.key === 'Enter') handleMessage()">
+            <button onclick="handleMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
